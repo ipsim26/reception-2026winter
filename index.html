@@ -268,8 +268,9 @@
   function show(step) {
     ["step1", "step2", "step3"].forEach(s => { $(s).hidden = s !== step; });
     $("bar").hidden = step !== "step1";
-    $("noteText").textContent = step === "step2"
-      ? "スクリーンショットを撮り、この画面を記録してください"
+    $("noteText").textContent =
+      step === "step2" ? "スクリーンショットを撮り、この画面を記録してください"
+      : step === "step3" ? ""
       : "面談は30分を予定しております";
     window.scrollTo(0, 0);
   }
